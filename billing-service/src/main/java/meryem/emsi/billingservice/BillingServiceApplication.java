@@ -28,11 +28,12 @@ public class BillingServiceApplication {
     }
   @Bean
     CommandLineRunner start(BillRepository billRepository,
-                            ProductItemRepository productItemRepository, CustomerRestClient customerRestClient,
+                            ProductItemRepository productItemRepository,
+                            CustomerRestClient customerRestClient,
                             ProductRestClient productRestClient){
         return args->{
-            Collection<Product> products= productRestClient.allProduct().getContent();
-            Long customerId=1L;
+            Collection<Product> products= productRestClient.allProducts().getContent();
+            Long customerId=1L; //const de type long on ajoute L
             Customer customer=customerRestClient.findCustomerById(customerId);
             if(customer==null) throw new RuntimeException("Customer not found");
             Bill bill =new Bill();

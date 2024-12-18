@@ -2,55 +2,57 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- Définition du parent Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/> <!-- recherche du parent dans le repository -->
     </parent>
+
+    <!-- Définition du groupe, de l'artifact et de la version du projet -->
     <groupId>meryem.emsi</groupId>
     <artifactId>gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gateway</name>
     <description>gateway</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+
+    <!-- Propriétés de configuration -->
     <properties>
-        <java.version>17</java.version>
-        <spring-cloud.version>2023.0.3</spring-cloud.version>
+        <java.version>17</java.version>  <!-- Version de Java -->
+        <spring-cloud.version>2023.0.3</spring-cloud.version>  <!-- Version de Spring Cloud -->
     </properties>
+
+    <!-- Dépendances du projet -->
     <dependencies>
+        <!-- Dépendance Spring Boot Actuator (Pour exposer des endpoints de gestion et de monitoring) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
+        <!-- Dépendance Spring Cloud Gateway (Pour le routage et la gestion des API Gateway) -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
+        <!-- Dépendance Eureka Client (Pour la découverte de services avec Netflix Eureka) -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!-- Dépendance pour les tests unitaires -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <!-- Gestion des dépendances Spring Cloud -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -63,8 +65,10 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- Configuration de la construction du projet -->
     <build>
         <plugins>
+            <!-- Plugin Maven pour Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

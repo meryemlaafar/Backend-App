@@ -16,7 +16,7 @@ public class ProductItem {
     private Long id;
     private Long productId;
     @ManyToOne
-    @JsonProperty(access= JsonProperty.Access.WRITE_ONLY)
+    @JsonProperty(access= JsonProperty.Access.WRITE_ONLY)//productitem cest pas la peine de renvoyer
     private Bill bill;
     private int quantity;
     private double price;

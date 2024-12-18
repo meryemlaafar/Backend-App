@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/CustomerService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/InventoryService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/billing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
   </component>
